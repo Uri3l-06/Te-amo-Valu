@@ -38,8 +38,49 @@ export const memories: MemoryItem[] = [
     title: 'El primer mensajito',
     date: '4 de mayo del 2025, 12:08 a.m.',
     shortFeeling: 'El inicio, de mi historia con el amor de mi vida.',
-    longText:
-      'Muchos dicen que los primeros mensajes son insignificantes en el momento, como si no fueran tan importantes porque la persona todavia no es lo suficientemente especial para ti. Pero no puedo estar más en desacuerdo, porque ese mensaje tuyo a las 12:08 a.m., un 4 de mayo del 2025, fue una de las cosas mas grandes que experimente. Estaba emocionado de que esa niña guapisima me hubiera buscado.\n\nDebo confesarte amor, que empeze a delulear jajajajaja. Me emocione muchisimo. No grite de alegria porque me da wewencha, pero recuerdo esa sensacion de coqueteo en el estomago, ese sentimiento de intriga y esas ganas de tener más de ti.\n\nMe llevo las emociones que me hiciste sentir con ese mensaje. Fui muy feliz.\n\nEntonces, en mi mente, yo pense que quizas te interesaba aunque fuera un poquito. Cuando llegaba el momento de dormir, no paraba de pensar que escribirte. Tenia que ser perfecto, pero sutil, para no espantarte.\n\nEntonces empece con una verdad absoluta: "Me dio mucho gusto conocerte". Y es que, a quien no le daria gusto conocer al amor de su vida?\n\nDespúes tenias que continuar con algo que te dejará claro lo mucho que me interesabas, como si los halagos que te dije bailando no bastaran: "estas guapisima". Otra verdad absoluta, porque si lo eres, mi amor.\n\nPero te cuento que estuve a nada de no mandarlo. Me dio fundillo. Sin embargo, pense en el futuro imaginario que habia creado hace cuatro minutos y dije: si, vale la pena el riesgo.\n\nY por último cerre con: "pasa linda noche", porque mi noche ya habia sido demasiado linda. Habia conocido a la nina del gorrito de fiesta, vestido negro, collar de perlas y zapatillas blancas.\n\nO sea, yo? El que se le rompio el zapato? Conoci a esa increible mujer?\n\nSimplemente increible.',
+    longText: `Muchos dicen que los primeros mensajes son insignificantes en el momento, como si no fueran tan importantes porque la persona todavía no es lo suficientemente especial para ti, pero yo no puedo estar más en desacuerdo, porque ese mensaje tuyo a las 12:08 a.m., un 4 de mayo del 2025, fue una de las cosas más grandes que experimenté.
+
+Tal vez para cualquiera era solo un mensajito, una notificación más o unas palabras sencillas después de una noche bonita, pero para mí no fue eso, para mí fue como si de pronto algo se hubiera encendido.
+
+Estaba emocionado de que esa niña guapísima me hubiera buscado, esa niña del gorrito de fiesta, del vestido negro, del collar de perlas y las zapatillas blancas, esa niña que me había gustado tanto desde que la vi y que, sin saberlo, ya me había dejado con una emoción bien rara, de esas que no se saben explicar, pero se sienten en todo el cuerpo.
+
+Debo confesarte, amor, que empecé a delulear jajajajaja, me emocioné muchísimo y no grité de alegría porque me da wewencha, pero por dentro sí estaba como niño chiquito, porque recuerdo esa sensación de coqueteo en el estómago, esa intriga bonita, esas ganas de saber más de ti, de hablar más contigo y de no dejar que la conversación se muriera rápido.
+
+Y es curioso, porque a veces uno intenta hacerse el tranquilo, como si no le hubiera importado tanto, pero la verdad es que sí me importó, me importó demasiado.
+
+Me quedé pensando en ese mensaje, en la forma en que me escribiste y en que te habías tomado el tiempo de buscarme, y aunque quizá para ti fue algo natural, para mí se sintió como una pequeña puerta abriéndose, una puertita chiquita, pero suficiente para que yo empezara a imaginar cosas que ni siquiera sabía si podían pasar.
+
+Me llevo las emociones que me hiciste sentir con ese mensaje: la emoción, los nervios, la sonrisa tonta, la curiosidad y la ilusión, porque me llevo ese momento como algo muy bonito, ya que fui muy feliz, aunque quizá todavía no sabía bien cuánto iba a significar después.
+
+Entonces, en mi mente, yo pensé que quizás te interesaba aunque fuera un poquito, y con ese poquito me bastó para empezar a pensar de más, porque así soy, porque me gana la emoción y porque cuando algo me importa empiezo a cuidar hasta el punto y la coma.
+
+Cuando llegó el momento de dormir, no paraba de pensar qué escribirte, tenía que ser perfecto, pero sutil, para no espantarte, tenía que sonar bonito, pero no intenso, y tenía que dejar claro que me habías gustado sin verme como alguien que ya había construido una vida completa contigo en su cabeza… aunque, siendo sinceros, tal vez ya llevaba como cuatro minutos haciéndolo jajajajaja.
+
+Entonces empecé con una verdad absoluta: “Me dio mucho gusto conocerte”, y es que, ¿a quién no le daría gusto conocer al amor de su vida?
+
+No lo dije así en ese momento, claro, porque no podía y hubiera sido demasiado, pero por dentro sí se sentía grande, ya que conocerte no se sintió como algo cualquiera, sino como uno de esos momentos que pasan normal por fuera, pero por dentro se quedan haciendo eco.
+
+Después tenía que continuar con algo que te dejara claro lo mucho que me interesabas, como si los halagos que te dije bailando no bastaran: “estás guapísima”, otra verdad absoluta, porque sí lo eres, mi amor, pero no solo guapísima así de “qué bonita se ve”, sino guapísima de una forma que se me quedó grabada, por cómo te veías, por cómo te movías, por cómo sonreías y por cómo hacías que todo alrededor se sintiera más especial sin siquiera intentarlo.
+
+Pero te cuento que estuve a nada de no mandarlo, porque me dio fundillo, me dio miedo verme muy obvio, muy emocionado, muy yo, y también me dio miedo que pensaras “ay, este niño qué intenso” y que salieras corriendo antes de que siquiera empezara algo bonito.
+
+Sin embargo, pensé en el futuro imaginario que había creado hacía cuatro minutos y dije: sí, vale la pena el riesgo, porque hay cosas que uno no manda solo por valentía, sino porque algo dentro te dice que, si no lo haces, te vas a quedar pensando en qué hubiera pasado.
+
+Y por último cerré con: “pasa linda noche”, porque mi noche ya había sido demasiado linda, ya que había conocido a la niña del gorrito de fiesta, vestido negro, collar de perlas y zapatillas blancas, había hablado contigo, había bailado contigo y había sentido esa emoción bonita de querer acercarme más, pero también de querer cuidarte, de no incomodarte y de no invadir tu espacio.
+
+Y luego me escribiste.
+
+O sea, ¿yo?, ¿el que se le rompió el zapato?, ¿el que probablemente intentaba verse tranquilo mientras por dentro estaba todo emocionado?, ¿yo conocí a esa increíble mujer?
+
+Simplemente increíble.
+
+Por eso guardo tanto este recuerdo, no porque haya sido perfecto, sino porque fue real, porque tuvo pena, nervios, risa, mensajes sencillos y una emoción que empezó chiquita, pero se quedó viviendo bonito en mí.
+
+Por algo lo tengo fijado en mi chat de Instagram, porque cada vez que te extraño vuelvo a leerlo, y no lo hago solo por nostalgia, sino porque ese mensaje me recuerda el inicio de una emoción muy bonita, me recuerda ese nervio, esa ilusión y esa sonrisa tonta que me sacaste sin darte cuenta.
+
+A veces lo leo y pienso: qué loco que algo tan pequeño haya significado tanto para mí, pero así fue, ese mensajito se volvió una especie de recuerdo guardado, como una pruebita bonita de que hubo un momento en el que todo empezó a sentirse diferente.
+
+Y si hoy lo vuelvo a leer, todavía puedo recordar exactamente lo que sentí: esa mezcla de sorpresa, ilusión y alegría de pensar que tal vez, solo tal vez, algo muy bonito estaba empezando contigo.`,
     imagePath: '/backgrounds/first-message-photo.jpg',
     soundtrackPath: '/soundtracks/primer-mensaje.mp3',
     soundtrackTitle: 'Primer mensajito',
