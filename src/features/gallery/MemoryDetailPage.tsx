@@ -71,16 +71,20 @@ export function MemoryDetailPage() {
         </div>
 
         <div className="rounded-[2rem] border border-border bg-white/60 p-6 shadow-paper backdrop-blur-sm">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-muted">Cierre bonito</p>
-          <div className="mt-4 space-y-4 text-sm leading-8 text-text">
-            <p>
-              La idea de estas memorias largas no es solo mostrar algo lindo, sino dejar que el recuerdo respire.
-              Que haya imagen, aire, texto y una cancioncita corta para que todo se sienta mas cercano.
-            </p>
-            <p>
-              Ese tono claro, blush y terracota se mantiene tambien aqui para que la app no se apague ni se vaya a
-              un mood cafe dominante.
-            </p>
+          <<p>
+  Y así, sin que tú lo supieras, ese mensajito se quedó guardado en mí.
+  No por lo perfecto que fue, sino por todo lo que me hizo sentir.
+</p>
+
+<p>
+  Porque esa noche entendí que a veces algo chiquito, como un mensaje a las
+  12:08 a.m., puede hacer que el corazón empiece a imaginar cosas bonitas.
+</p>
+
+<p>
+  Tal vez para cualquiera fue solo una conversación más, pero para mí fue el
+  inicio de una emoción que todavía me gusta recordar.
+</p>
           </div>
 
           <Link className={`${buttonStyles('primary')} mt-6`} to="/gallery">
