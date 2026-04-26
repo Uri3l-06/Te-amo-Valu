@@ -11,27 +11,33 @@ export function ChatMemory({ messages, sections, compact = false }: ChatMemoryPr
 
   if (hasSections) {
     return (
-      <div className={`flex flex-col gap-8 ${compact ? 'max-w-sm' : 'max-w-xl'}`}>
+      <div className={`flex flex-col gap-6 ${compact ? 'max-w-sm' : 'max-w-xl'}`}>
         {sections!.map((section, sectionIndex) => (
           <div key={`section-${sectionIndex}`} className="flex flex-col gap-4">
+            {/* Separador de sección con elemento floral */}
             <div className="flex items-center gap-3">
-              <div className="h-px flex-1 bg-border/60" />
-              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-muted whitespace-nowrap px-2">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border/50 to-transparent" />
+              <p className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-muted whitespace-nowrap px-2">
                 {section.section}
               </p>
-              <div className="h-px flex-1 bg-border/60" />
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border/50 to-transparent" />
             </div>
-            <div className="flex flex-col gap-3">
+
+            {/* Mensajes de la sección */}
+            <div className="flex flex-col gap-2.5">
               {section.messages.map((message, index) => {
                 const isValery = message.from === 'valery'
                 return (
-                  <div key={`${section.section}-${message.from}-${index}`} className={`flex ${isValery ? 'justify-start' : 'justify-end'}`}>
+                  <div
+                    key={`${section.section}-${message.from}-${index}`}
+                    className={`flex ${isValery ? 'justify-start' : 'justify-end'}`}
+                  >
                     <div
                       className={[
-                        'max-w-[85%] rounded-[1.5rem] px-4 py-3 text-sm leading-6 shadow-sm',
+                        'max-w-[85%] rounded-[1.25rem] px-4 py-2.5 text-sm leading-6 shadow-sm',
                         isValery
-                          ? 'rounded-bl-md bg-white/85 text-text-strong ring-1 ring-border/70'
-                          : 'rounded-br-md bg-primary/70 text-text-strong ring-1 ring-primary/60',
+                          ? 'rounded-bl-md bg-white/90 text-text-strong ring-1 ring-border/50'
+                          : 'rounded-br-md bg-primary/80 text-text-strong ring-1 ring-primary/40',
                       ].join(' ')}
                     >
                       <p>{message.text}</p>
@@ -51,7 +57,7 @@ export function ChatMemory({ messages, sections, compact = false }: ChatMemoryPr
   }
 
   return (
-    <div className={`flex flex-col gap-3 ${compact ? 'max-w-sm' : 'max-w-xl'}`}>
+    <div className={`flex flex-col gap-2.5 ${compact ? 'max-w-sm' : 'max-w-xl'}`}>
       {messages.map((message, index) => {
         const isValery = message.from === 'valery'
 
@@ -59,17 +65,12 @@ export function ChatMemory({ messages, sections, compact = false }: ChatMemoryPr
           <div key={`${message.from}-${index}`} className={`flex ${isValery ? 'justify-start' : 'justify-end'}`}>
             <div
               className={[
-                'max-w-[85%] rounded-[1.5rem] px-4 py-3 text-sm leading-6 shadow-sm',
+                'max-w-[85%] rounded-[1.25rem] px-4 py-2.5 text-sm leading-6 shadow-sm',
                 isValery
-                  ? 'rounded-bl-md bg-white/85 text-text-strong ring-1 ring-border/70'
-                  : 'rounded-br-md bg-primary/70 text-text-strong ring-1 ring-primary/60',
+                  ? 'rounded-bl-md bg-white/90 text-text-strong ring-1 ring-border/50'
+                  : 'rounded-br-md bg-primary/80 text-text-strong ring-1 ring-primary/40',
               ].join(' ')}
             >
-              {!compact ? (
-                <p className="mb-1 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-muted">
-                  {isValery ? 'Valery' : 'Yo'}
-                </p>
-              ) : null}
               <p>{message.text}</p>
             </div>
           </div>
