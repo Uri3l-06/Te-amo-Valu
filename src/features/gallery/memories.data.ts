@@ -83,7 +83,7 @@ A veces lo leo y pienso: qué loco que algo tan pequeño haya significado tanto 
 Y si hoy lo vuelvo a leer, todavía puedo recordar exactamente lo que sentí: esa mezcla de sorpresa, ilusión y alegría de pensar que tal vez, solo tal vez, algo muy bonito estaba empezando contigo.`,
     imagePath: '/backgrounds/first-message-photo.jpg',
     soundtrackPath: '/soundtracks/primer-mensaje.mp3',
-    soundtrackTitle: 'Enchanted — Taylor Swift,
+    soundtrackTitle: 'Enchanted — Taylor Swift',
     category: 'chat',
     featured: true,
     immersive: true,
