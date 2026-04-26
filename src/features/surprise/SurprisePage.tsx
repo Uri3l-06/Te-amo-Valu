@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '../../shared/components/Button'
 import { SectionTitle } from '../../shared/components/SectionTitle'
+import { BackToMenu } from '../../shared/components/BackToMenu'
 import { getRandomItemWithoutImmediateRepeat } from '../../shared/utils/random'
 import { memories } from '../gallery/memories.data'
 
@@ -21,9 +22,7 @@ export function SurprisePage() {
 
   return (
     <section className="flex flex-1 flex-col gap-8 pb-10 pt-4 sm:gap-10 sm:pb-14">
-      <Link className="text-sm font-semibold text-muted transition hover:text-text" to="/menu">
-        Volver al menu de la casita
-      </Link>
+      <BackToMenu to="/menu" label="Volver a la casita" />
 
       <SectionTitle
         eyebrow="Sorpresa"

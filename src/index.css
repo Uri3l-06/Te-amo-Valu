@@ -16,7 +16,11 @@
   --color-text-strong: #35241d;
   --color-muted: #a36956;
   --color-border: #e8c9b6;
+  --color-rose-gold: #c98773;
+  --color-flower-accent: #d9a08c;
   --shadow-soft: 0 24px 60px rgba(207, 144, 116, 0.14);
+  --shadow-flower: 0 16px 48px rgba(201, 135, 115, 0.18);
+  --shadow-card-float: 0 20px 50px rgba(207, 144, 116, 0.12);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -36,8 +40,8 @@
     @apply min-h-screen bg-bg font-body text-text;
     margin: 0;
     background-image:
-      radial-gradient(circle at top, rgba(229, 173, 158, 0.28), transparent 34%),
-      radial-gradient(circle at bottom right, rgba(238, 200, 180, 0.4), transparent 28%),
+      radial-gradient(circle at top, rgba(229, 173, 158, 0.24), transparent 36%),
+      radial-gradient(circle at bottom right, rgba(238, 200, 180, 0.36), transparent 32%),
       linear-gradient(180deg, rgba(249, 240, 234, 0.98), rgba(247, 238, 233, 1));
   }
 
@@ -65,6 +69,7 @@
 }
 
 @layer components {
+  /* Texturas de papel */
   .paper-texture {
     background-image:
       linear-gradient(135deg, rgba(255, 255, 255, 0.35), transparent 55%),
@@ -78,10 +83,257 @@
       );
   }
 
+  .paper-texture-editorial {
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(249, 240, 234, 0.3)),
+      repeating-linear-gradient(
+        0deg,
+        rgba(163, 105, 86, 0.03),
+        rgba(163, 105, 86, 0.03) 1px,
+        transparent 1px,
+        transparent 9px
+      ),
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), transparent 40%);
+  }
+
+  .paper-texture-letter {
+    background-image:
+      linear-gradient(180deg, rgba(255, 252, 250, 0.5), rgba(249, 245, 242, 0.4)),
+      repeating-linear-gradient(
+        45deg,
+        rgba(201, 135, 115, 0.015),
+        rgba(201, 135, 115, 0.015) 2px,
+        transparent 2px,
+        transparent 12px
+      ),
+      radial-gradient(circle at 80% 20%, rgba(229, 173, 158, 0.08), transparent 30%);
+  }
+
+  /* Textura de diario/álbum */
+  .paper-texture-diary {
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 50%),
+      repeating-linear-gradient(
+        90deg,
+        rgba(163, 105, 86, 0.015),
+        rgba(163, 105, 86, 0.015) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+  }
+
+  /* Vintage polaroid */
+  .polaroid-frame {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(249, 240, 234, 0.85)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.08),
+      0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Vintage polaroid invert */
+  .polaroid-frame-invert {
+    background:
+      linear-gradient(135deg, rgba(249, 240, 234, 0.9), rgba(255, 255, 255, 0.85)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.08),
+      0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  /*Soft ring decorativo*/
   .soft-ring {
     box-shadow: 0 0 0 1px rgba(232, 201, 182, 0.9);
   }
 
+  /* Flor decorativa - esquina */
+  .floral-corner-tl {
+    position: relative;
+  }
+  .floral-corner-tl::before {
+    content: '';
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='50' cy='50' rx='48' ry='48' fill='none' stroke='%23d9a08c' stroke-width='1.5' opacity='0.5'/%3E%3Cellipse cx='50' cy='50' rx='38' ry='38' fill='none' stroke='%23d9a08c' stroke-width='0.8' opacity='0.35'/%3E%3Cellipse cx='50' cy='50' rx='28' ry='28' fill='none' stroke='%23d9a08c' stroke-width='0.5' opacity='0.25'/%3E%3Cpath d='M50 15 Q65 25 70 40 Q75 55 50 85 Q25 55 30 40 Q35 25 50 15' fill='none' stroke='%23d9a08c' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+  }
+
+  .floral-corner-tr {
+    position: relative;
+  }
+  .floral-corner-tr::before {
+    content: '';
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='50' cy='50' rx='48' ry='48' fill='none' stroke='%23d9a08c' stroke-width='1.5' opacity='0.5'/%3E%3Cellipse cx='50' cy='50' rx='38' ry='38' fill='none' stroke='%23d9a08c' stroke-width='0.8' opacity='0.35'/%3E%3Cellipse cx='50' cy='50' rx='28' ry='28' fill='none' stroke='%23d9a08c' stroke-width='0.5' opacity='0.25'/%3E%3Cpath d='M50 15 Q65 25 70 40 Q75 55 50 85 Q25 55 30 40 Q35 25 50 15' fill='none' stroke='%23d9a08c' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    transform: scaleX(-1);
+  }
+
+  .floral-corner-bl {
+    position: relative;
+  }
+  .floral-corner-bl::before {
+    content: '';
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='50' cy='50' rx='48' ry='48' fill='none' stroke='%23d9a08c' stroke-width='1.5' opacity='0.5'/%3E%3Cellipse cx='50' cy='50' rx='38' ry='38' fill='none' stroke='%23d9a08c' stroke-width='0.8' opacity='0.35'/%3E%3Cellipse cx='50' cy='50' rx='28' ry='28' fill='none' stroke='%23d9a08c' stroke-width='0.5' opacity='0.25'/%3E%3Cpath d='M50 15 Q65 25 70 40 Q75 55 50 85 Q25 55 30 40 Q35 25 50 15' fill='none' stroke='%23d9a08c' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    transform: scaleY(-1);
+  }
+
+  .floral-corner-br {
+    position: relative;
+  }
+  .floral-corner-br::before {
+    content: '';
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='50' cy='50' rx='48' ry='48' fill='none' stroke='%23d9a08c' stroke-width='1.5' opacity='0.5'/%3E%3Cellipse cx='50' cy='50' rx='38' ry='38' fill='none' stroke='%23d9a08c' stroke-width='0.8' opacity='0.35'/%3E%3Cellipse cx='50' cy='50' rx='28' ry='28' fill='none' stroke='%23d9a08c' stroke-width='0.5' opacity='0.25'/%3E%3Cpath d='M50 15 Q65 25 70 40 Q75 55 50 85 Q25 55 30 40 Q35 25 50 15' fill='none' stroke='%23d9a08c' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    transform: scale(-1);
+  }
+
+  /* Divisor floralbotánico */
+  .botanical-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+  .botanical-divider::before,
+  .botanical-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 135, 115, 0.4), transparent);
+  }
+  .botanical-divider-icon {
+    width: 2rem;
+    height: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='20' cy='20' rx='18' ry='18' fill='none' stroke='%23d9a08c' stroke-width='0.8' opacity='0.5'/%3E%3Cpath d='M20 8 Q28 15 30 22 Q32 30 20 32 Q8 30 10 22 Q12 15 20 8' fill='none' stroke='%23d9a08c' stroke-width='0.8' opacity='0.6'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+  }
+
+  /*Sello floralrose-gold*/
+  .rose-seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c98773, #d9a08c);
+    box-shadow:
+      0 2px 4px rgba(201, 135, 115, 0.3),
+      inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    position: relative;
+  }
+  .rose-seal::after {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='20' cy='20' rx='18' ry='18' fill='none' stroke='%23fff' stroke-width='1' opacity='0.5'/%3E%3Cpath d='M20 8 Q28 15 30 22 Q32 30 20 32 Q8 30 10 22 Q12 15 20 8' fill='none' stroke='%23fff' stroke-width='0.8' opacity='0.6'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /*Cinta de papeldec decorativa*/
+  .paper-tape-h {
+    position: relative;
+  }
+  .paper-tape-h::before {
+    content: '';
+    position: absolute;
+    top: -0.375rem;
+    left: 25%;
+    width: 2.5rem;
+    height: 0.75rem;
+    background: linear-gradient(180deg, rgba(247, 238, 233, 0.85), rgba(241, 228, 218, 0.9));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transform: rotate(-3deg);
+    opacity: 0.85;
+  }
+
+  /*Gerbera prensada translúcida*/
+  .pressed-flower {
+    position: relative;
+  }
+  .pressed-flower::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='100' cy='100' rx='95' ry='95' fill='none' stroke='%23d9a08c' stroke-width='1' opacity='0.15'/%3E%3Cellipse cx='100' cy='100' rx='75' ry='75' fill='none' stroke='%23d9a08c' stroke-width='0.6' opacity='0.1'/%3E%3Cellipse cx='100' cy='100' rx='55' ry='55' fill='none' stroke='%23d9a08c' stroke-width='0.4' opacity='0.08'/%3E%3Cpath d='M100 20 Q135 40 150 75 Q165 110 100 180 Q35 110 50 75 Q65 40 100 20' fill='none' stroke='%23e5ad9e' stroke-width='2' opacity='0.25'/%3E%3Cpath d='M100 30 Q130 48 142 78 Q155 108 100 170 Q45 108 58 78 Q70 48 100 30' fill='none' stroke='%23d9a08c' stroke-width='1.2' opacity='0.3'/%3E%3Cpath d='M100 40 Q125 55 135 82 Q145 109 100 160 Q55 109 65 82 Q75 55 100 40' fill='none' stroke='%23e5ad9e' stroke-width='0.8' opacity='0.2'/%3E%3Ccircle cx='100' cy='100' r='8' fill='%23cf9074' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  /*Petales sueltos decorativos*/
+  .petal-scatter {
+    position: relative;
+  }
+  .petal-scatter::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 3 Q22 8 24 15 Q26 22 15 27 Q4 22 6 15 Q8 8 15 3' fill='%23e5ad9e' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(15deg);
+    opacity: 0.5;
+  }
+  .petal-scatter::after {
+    content: '';
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    width: 0.875rem;
+    height: 0.875rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 3 Q22 8 24 15 Q26 22 15 27 Q4 22 6 15 Q8 8 15 3' fill='%23d9a08c' opacity='0.35'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-20deg);
+    opacity: 0.4;
+  }
+
+  /* Frames de imagemás elegant */
+  .frame-elegant {
+    box-shadow:
+      0 4px 12px rgba(96, 51, 40, 0.1),
+      0 12px 36px rgba(96, 51, 40, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+
+  /* Story grid */
   .story-grid {
     column-gap: 1rem;
   }
@@ -105,5 +357,91 @@
 
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Utilidades decorativas */
+  .floral-glow {
+    text-shadow: 0 0 20px rgba(229, 173, 158, 0.3);
+  }
+
+  .text-rose-gold {
+    color: var(--color-rose-gold);
+  }
+
+  .from-rose-gold {
+    --gradient-from: var(--color-rose-gold);
+  }
+
+  /* Animaciones base */
+  .animate-fade-in-soft {
+    animation: fadeInSoft 0.6s ease-out forwards;
+  }
+
+  .animate-fade-up-soft {
+    animation: fadeUpSoft 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in-soft {
+    animation: scaleInSoft 0.5s ease-out forwards;
+  }
+
+  .animate-float-soft {
+    animation: floatSoft 4s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse-soft {
+    animation: glowPulseSoft 3s ease-in-out infinite;
+  }
+
+  /* Stagger delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
+  .delay-900 { animation-delay: 900ms; }
+}
+
+@keyframes fadeInSoft {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleInSoft {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes glowPulseSoft {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(229, 173, 158, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(229, 173, 158, 0.3);
   }
 }

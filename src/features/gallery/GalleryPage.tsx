@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { SectionTitle } from '../../shared/components/SectionTitle'
+import { BackToMenu } from '../../shared/components/BackToMenu'
 import { MemoryCard } from './MemoryCard'
 import { MemoryModal } from './MemoryModal'
 import { memories, type MemoryItem } from './memories.data'
@@ -13,9 +13,7 @@ export function GalleryPage() {
   return (
     <section className="flex flex-1 flex-col gap-8 pb-10 pt-4 sm:gap-10 sm:pb-14">
       <header className="flex flex-col gap-5">
-        <Link className="text-sm font-semibold text-muted transition hover:text-text" to="/menu">
-          Volver a la porte d'entrée de la casita
-        </Link>
+        <BackToMenu to="/menu" label="Volver a la casita" />
 
         <SectionTitle
           eyebrow="Galeria"

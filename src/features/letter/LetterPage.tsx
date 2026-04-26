@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { SectionTitle } from '../../shared/components/SectionTitle'
+import { BackToMenu } from '../../shared/components/BackToMenu'
 import { Envelope } from './Envelope'
 
 const letterParagraphs = [
@@ -14,9 +14,7 @@ export function LetterPage() {
 
   return (
     <section className="flex flex-1 flex-col gap-8 pb-10 pt-4 sm:gap-10 sm:pb-14">
-      <Link className="text-sm font-semibold text-muted transition hover:text-text" to="/menu">
-        Volver al menu de la casita
-      </Link>
+      <BackToMenu to="/menu" label="Volver a la casita" />
 
       <SectionTitle
         eyebrow="Carta"
