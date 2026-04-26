@@ -95,7 +95,7 @@ export function MemoryDetailPage() {
       <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="paper-texture rounded-[2rem] border border-border bg-surface-soft/70 p-6 shadow-paper">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-muted">
-            Lo que guardo de ese momento
+            El momento ❤️
           </p>
 
           <div className="mt-4 space-y-4 whitespace-pre-wrap text-sm leading-8 text-text">
